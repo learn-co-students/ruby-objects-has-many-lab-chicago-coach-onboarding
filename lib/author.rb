@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pry'
 
 class Author
@@ -24,10 +26,12 @@ class Author
   end
 
   def posts
-    Post.all.select {|post| post.author == self}
+    Post.all.select { |post| post.author == self }
   end
 
   def self.post_count
     Post.all.count
   end
+
+  def new_method; end
 end
